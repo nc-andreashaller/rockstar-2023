@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/rockstar-2023/clientlibs"/>
+    <filter root="/apps/rockstar-2023/components"/>
+    <filter root="/apps/rockstar-2023/i18n"/>
+</workspaceFilter>

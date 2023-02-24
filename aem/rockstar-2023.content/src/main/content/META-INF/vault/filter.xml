@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/rockstar-2023"/>
+    <filter root="/content/rockstar-2023"/>
+    <filter root="/content/dam/rockstar-2023"/>
+    <filter root="/content/experience-fragments/rockstar-2023"/>
+</workspaceFilter>

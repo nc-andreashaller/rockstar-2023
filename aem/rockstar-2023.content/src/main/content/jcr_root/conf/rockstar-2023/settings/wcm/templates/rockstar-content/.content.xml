@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="cq:Template">
+    <jcr:content
+        cq:lastModified="{Date}2023-02-24T12:00:31.891+01:00"
+        cq:lastModifiedBy="admin"
+        cq:templateType="/conf/rockstar-2023/settings/wcm/template-types/content-page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Rockstar Content"
+        status="enabled"/>
+</jcr:root>

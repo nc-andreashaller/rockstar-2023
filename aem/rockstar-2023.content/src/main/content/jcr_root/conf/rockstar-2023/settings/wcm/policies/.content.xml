@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Page">
+    <rep:policy/>
+    <rockstar-2023 jcr:primaryType="nt:unstructured">
+        <components jcr:primaryType="nt:unstructured">
+            <container jcr:primaryType="nt:unstructured">
+                <policy_1677236174111
+                    jcr:lastModified="{Date}2023-02-24T11:56:33.831+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Rockstar Content"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    components="group:Rockstar.Content"
+                    layoutDisabled="false">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_1677236174111>
+            </container>
+        </components>
+    </rockstar-2023>
+</jcr:root>

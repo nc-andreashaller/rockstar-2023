@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:allowedTemplates="[/conf/rockstar-2023/settings/wcm/templates/landing-page-template,/conf/rockstar-2023/settings/wcm/templates/article-page-template,/conf/rockstar-2023/settings/wcm/templates/content-page-template,/conf/rockstar-2023/settings/wcm/templates/adventure-page-template]"
+        cq:conf="/conf/rockstar-2023"
+        cq:lastModified="{Date}2021-04-27T20:19:05.296-08:00"
+        cq:lastModifiedBy="admin"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Rockstar 2023 Site"
+        sling:configRef="/conf/rockstar-2023"
+        sling:resourceType="rockstar-2023/components/page"
+        cq:redirectTarget="/content/rockstar-2023/language-masters/en"
+        cq:template="/conf/rockstar-2023/settings/wcm/templates/landing-page-template">
+    </jcr:content>
+</jcr:root>
