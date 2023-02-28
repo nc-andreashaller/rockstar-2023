@@ -15,6 +15,6 @@
   ~ limitations under the License.
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <workspaceFilter version="1.0">
-    <filter root="/apps/wknd-packages"/>
-    <filter root="/apps/wknd-vendor-packages"/>
+    <filter root="/apps/rockstar-2023-packages"/>
+    <filter root="/apps/rockstar-2023-vendor-packages"/>
 </workspaceFilter>

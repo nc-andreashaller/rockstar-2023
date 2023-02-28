@@ -2,5 +2,5 @@
 <workspaceFilter version="1.0">
     <filter root="/apps/rockstar-2023/clientlibs"/>
     <filter root="/apps/rockstar-2023/components"/>
-    <filter root="/apps/rockstar-2023/i18n"/>
+    <filter root="/apps/rockstar-2023/services"/>
 </workspaceFilter>

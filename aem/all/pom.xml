@@ -57,20 +57,26 @@
                     <embeddeds>
                         <embedded>
                             <groupId>biz.netcentric.rockstar-2023</groupId>
-                            <artifactId>rockstar-2023.rockstar-2023.apps</artifactId>
+                            <artifactId>rockstar-2023.apps</artifactId>
                             <type>zip</type>
-                            <target>/apps/wknd-packages/application/install</target>
+                            <target>/apps/rockstar-2023-packages/application/install</target>
                         </embedded>
                         <embedded>
                             <groupId>biz.netcentric.rockstar-2023</groupId>
                             <artifactId>rockstar-2023.core</artifactId>
-                            <target>/apps/wknd-packages/application/install</target>
+                            <target>/apps/rockstar-2023-packages/application/install</target>
                         </embedded>
                         <embedded>
                             <groupId>biz.netcentric.rockstar-2023</groupId>
-                            <artifactId>rockstar-2023.rockstar-2023.content</artifactId>
+                            <artifactId>rockstar-2023.config</artifactId>
                             <type>zip</type>
-                            <target>/apps/wknd-packages/content/install</target>
+                            <target>/apps/rockstar-2023-packages/content/install</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>biz.netcentric.rockstar-2023</groupId>
+                            <artifactId>rockstar-2023.content</artifactId>
+                            <type>zip</type>
+                            <target>/apps/rockstar-2023-packages/content/install</target>
                         </embedded>
                     </embeddeds>
                 </configuration>
@@ -177,7 +183,7 @@
     <dependencies>
         <dependency>
             <groupId>biz.netcentric.rockstar-2023</groupId>
-            <artifactId>rockstar-2023.rockstar-2023.apps</artifactId>
+            <artifactId>rockstar-2023.apps</artifactId>
             <version>${project.version}</version>
             <type>zip</type>
         </dependency>
@@ -188,7 +194,13 @@
         </dependency>
         <dependency>
             <groupId>biz.netcentric.rockstar-2023</groupId>
-            <artifactId>rockstar-2023.rockstar-2023.content</artifactId>
+            <artifactId>rockstar-2023.config</artifactId>
+            <version>${project.version}</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>biz.netcentric.rockstar-2023</groupId>
+            <artifactId>rockstar-2023.content</artifactId>
             <version>${project.version}</version>
             <type>zip</type>
         </dependency>

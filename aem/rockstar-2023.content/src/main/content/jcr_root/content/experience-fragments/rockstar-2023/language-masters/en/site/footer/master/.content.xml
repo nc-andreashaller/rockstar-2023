@@ -31,17 +31,11 @@
                     sling:resourceType="rockstar-2023/components/container"
                     layout="responsiveGrid">
                     <cq:responsive jcr:primaryType="nt:unstructured"/>
-                    <title 
-                        jcr:title="Rockstar 2023"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="core/wcm/components/title/v3/title"
-                        type="h3"
-                        linkTarget="_self"/>
                     <text
                         cq:styleIds="[1571074021746]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="core/wcm/components/text/v2/text"
-                        text="&lt;p>Ⓒ 2023&lt;/p>&#xa;"
+                        text="&lt;p>Ⓒ 2023 Cognizant Netcentric&lt;/p>&#xa;"
                         textIsRich="true"/>
                 </container>
             </container>

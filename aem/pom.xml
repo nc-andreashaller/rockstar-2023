@@ -35,8 +35,10 @@
     <modules>
         <module>all</module>
         <module>core</module>
+        <module>rockstar-2023.frontend</module>
         <module>rockstar-2023.apps</module>
         <module>rockstar-2023.apps.structure</module>
+        <module>rockstar-2023.config</module>
         <module>rockstar-2023.content</module>
         <module>dispatcher</module>
     </modules>
@@ -54,7 +56,7 @@
         <bnd.version>5.1.2</bnd.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <aem.sdk.api>2023.1.10912.20230130T173z736Z-220900</aem.sdk.api>
+        <aem.sdk.api>2023.1.10912.20230130T173736Z-230100</aem.sdk.api>
         <componentGroupName>Rockstar Site</componentGroupName>
         <core.wcm.components.version>2.20.8</core.wcm.components.version>
         <uber.jar.version>6.5.13</uber.jar.version>

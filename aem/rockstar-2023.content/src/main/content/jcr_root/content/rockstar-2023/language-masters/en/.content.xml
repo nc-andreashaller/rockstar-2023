@@ -21,7 +21,14 @@
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="rockstar-2023/components/container"
-                layout="responsiveGrid"/>
+                layout="responsiveGrid">
+                <content
+                    jcr:lastModified="{Date}2023-02-24T13:40:53.434+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="rockstar-2023/components/content"
+                    reference="https://main--rockstar-2023--nc-andreashaller.hlx.live/rockstar"/>
+            </container>
         </root>
     </jcr:content>
 </jcr:root>

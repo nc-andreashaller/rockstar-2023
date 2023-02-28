@@ -15,7 +15,7 @@
     <!-- ====================================================================== -->
     <!-- P R O J E C T  D E S C R I P T I O N                                   -->
     <!-- ====================================================================== -->
-    <artifactId>rockstar-2023.rockstar-2023.apps.structure</artifactId>
+    <artifactId>rockstar-2023.apps.structure</artifactId>
     <packaging>content-package</packaging>
     <name>Rockstar 2023 - UI apps structure</name>
     <description>

@@ -30,7 +30,7 @@
     <!-- ====================================================================== -->
     <!-- P R O J E C T  D E S C R I P T I O N                                   -->
     <!-- ====================================================================== -->
-    <artifactId>rockstar-2023.rockstar-2023.apps</artifactId>
+    <artifactId>rockstar-2023.apps</artifactId>
     <packaging>content-package</packaging>
     <name>Rockstar 2023 - UI apps</name>
     <description>UI apps package for Rockstar 2023 Project</description>
@@ -58,7 +58,7 @@
                     <repositoryStructurePackages>
                         <repositoryStructurePackage>
                             <groupId>biz.netcentric.rockstar-2023</groupId>
-                            <artifactId>rockstar-2023.rockstar-2023.apps.structure</artifactId>
+                            <artifactId>rockstar-2023.apps.structure</artifactId>
                         </repositoryStructurePackage>
                     </repositoryStructurePackages>
                     <dependencies>
@@ -114,7 +114,14 @@
 
         <dependency>
             <groupId>biz.netcentric.rockstar-2023</groupId>
-            <artifactId>rockstar-2023.rockstar-2023.apps.structure</artifactId>
+            <artifactId>rockstar-2023.frontend</artifactId>
+            <version>${project.version}</version>
+            <type>zip</type>
+        </dependency>
+
+        <dependency>
+            <groupId>biz.netcentric.rockstar-2023</groupId>
+            <artifactId>rockstar-2023.apps.structure</artifactId>
             <version>${project.version}</version>
             <type>zip</type>
         </dependency>
