@@ -15,7 +15,7 @@ indices:
         select: head > meta[name="description"]
         value: attribute(el, "content")
       image:
-        select: main > picture
+        select: main picture
         value: innerHTML(el)
       tags:
         select: head > meta[property="article:tag"]
