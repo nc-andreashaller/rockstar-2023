@@ -14,7 +14,7 @@
                 <items jcr:primaryType="nt:unstructured">
                     <content
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="Content"
+                        jcr:title="Teaser List"
                         sling:resourceType="granite/ui/components/coral/foundation/container"
                         margin="{Boolean}true">
                         <items jcr:primaryType="nt:unstructured">
@@ -31,7 +31,23 @@
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
                                                 name="./reference"
-                                                fieldLabel="Document"/>
+                                                fieldLabel="Folder"/>
+                                            <max-count
+                                                jcr:primaryType="nt:unstructured"
+                                                name="max-count"
+                                                min="0"
+                                                fieldLabel="Max Count"
+                                                fieldDescription="Maximal number of items to show, 0 for all available."
+                                                sling:resourceType="granite/ui/components/foundation/form/numberfield"/>
+                                            <keywords
+                                                jcr:primaryType="nt:unstructured"
+                                                fieldLabel="Keywords"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    name="./keywords"/>
+                                            </keywords>
                                         </items>
                                     </column>
                                 </items>

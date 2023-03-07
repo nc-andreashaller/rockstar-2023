@@ -1,0 +1,6 @@
+<div class="teaser" *ngFor="let teaser of list">
+    <a routerLink="/content{{teaser.url}}" routerLinkActive="active">
+        <h3>{{teaser.title}}</h3>
+        <picture [innerHTML]="teaser.image"></picture>
+    </a>
+</div>

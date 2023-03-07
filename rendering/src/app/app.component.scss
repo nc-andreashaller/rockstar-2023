@@ -1,0 +1,15 @@
+::ng-deep {
+    .columns > div {
+        display: flex;
+        align-items: center;
+        flex-direction: unset;
+    }
+    .columns > div > div {
+        flex: 1;
+        margin-left: 32px;
+    }
+
+    .columns > div > div:first-of-type {
+        margin-left: unset;
+    }
+}

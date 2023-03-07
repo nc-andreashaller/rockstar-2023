@@ -1,6 +1,12 @@
-<h1>Rockstar</h1>
-<ul>
-    <li><a routerLink="/en" routerLinkActive="active">Home</a></li>
-    <li><a routerLink="/en/article" routerLinkActive="active">Article</a></li>
-    <li><a routerLink="/en/landing" routerLinkActive="active">Landing</a></li>
-</ul>
+<mat-toolbar color="primary">
+    <span>Rockstar</span>
+    <span class="spacer"></span>
+    <button mat-icon-button  aria-label="menu" [matMenuTriggerFor]="navigation">
+        <mat-icon>menu</mat-icon>
+    </button>
+</mat-toolbar>
+<mat-menu #navigation="matMenu" color="primary">
+    <button mat-menu-item routerLink="/" routerLinkActive="active">Summary</button>
+    <button mat-menu-item routerLink="/what-are-rockstars" routerLinkActive="active">What are rockstars?</button>
+    <button mat-menu-item routerLink="/architecture" routerLinkActive="active">Architecture</button>
+</mat-menu>

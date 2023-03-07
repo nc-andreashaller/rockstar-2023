@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   
   ssr: boolean;
   structure: any;
+  reference: string | undefined;
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
@@ -34,8 +35,15 @@ export class AppComponent implements OnInit {
       : location.pathname.startsWith('/api/ssr') && new URLSearchParams(location.search).has('path')
       ? new URLSearchParams(location.search).get('path') || '' // rehydration execution
       : location.pathname; // normal csr execution
-    console.log('loading structure', path);
-    this.structure = await this.structureService.get(path);
-    console.log('loaded structure', this.structure);
+    if(path.startsWith('/content/')) {
+      console.log('loading content document', path);
+      this.structure = undefined;
+      this.reference = path.substring(8);
+    } else {
+      console.log('loading structure', path);
+      this.reference = undefined;
+      this.structure = await this.structureService.get(path);
+      console.log('loaded structure', this.structure);
+    }
   }
 }

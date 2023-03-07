@@ -1,0 +1,12 @@
+@mixin grid-defaults {
+    --rockstar-grid-columns: 12;
+    --rockstar-grid-columnspan: var(--rockstar-grid-columns);
+    --rockstar-grid-columnpadding: 20px;
+}
+
+@mixin grid-element {
+    float: left;
+    padding: var(--rockstar-grid-columnpadding);
+    width: calc(100% / var(--rockstar-grid-columns) * var(--rockstar-grid-columnspan) - 2 * var(--rockstar-grid-columnpadding));
+}
+  

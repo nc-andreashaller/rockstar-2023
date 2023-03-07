@@ -12,8 +12,11 @@ export class ContentService {
 
   constructor(private http: HttpClient) { }
 
-  async get(url: string): Promise<string> {
-    const endpoint = endpointPattern.replace('{path}', new URL(url).pathname);
+  async get(urlOrPath: string): Promise<string> {
+    const path = urlOrPath.startsWith('http')
+      ? new URL(urlOrPath).pathname
+      : urlOrPath;
+    const endpoint = endpointPattern.replace('{path}', path);
     console.log('requesting content', endpoint);
     return await lastValueFrom(this.http.get(endpoint, {responseType: 'text'}));
   }
