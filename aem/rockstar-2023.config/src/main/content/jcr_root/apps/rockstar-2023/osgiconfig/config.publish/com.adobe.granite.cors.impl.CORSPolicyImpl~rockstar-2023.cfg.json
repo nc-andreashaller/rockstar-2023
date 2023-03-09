@@ -11,7 +11,8 @@
   ],
   "maxage:Integer":1800,
   "alloworiginregexp":[
-    "http://localhost:.*"
+    "http://localhost:.*",
+    "https://kind-moss-.*.azurestaticapps.net.*"
   ],
   "allowedpaths":[
     "/apps/rockstar-2023/services/.*"

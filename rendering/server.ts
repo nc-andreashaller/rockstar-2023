@@ -3,8 +3,8 @@ import 'zone.js/node';
 import {AzureFunction, Context, HttpRequest} from "@azure/functions";
 import { ngExpressEngine } from '@nguniversal/express-engine';
 import * as express from 'express';
-import { existsSync } from 'fs';
 import { join } from 'path';
+import * as fs from 'fs';
 
 import { AppServerModule } from './src/main.server';
 
@@ -29,8 +29,9 @@ export const run: AzureFunction = async function (context: Context, req: HttpReq
   
   const server = express();
   context.log('express created');
-  const distFolder = join(process.cwd(), 'dist/rendering/browser');
-  const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
+  const distFolderPath = 'dist/rendering/browser';
+  const distFolder = join(process.cwd(), distFolderPath);
+  const indexHtml = join(process.cwd(), `${distFolderPath}/index.html`);
 
   // Our Universal express-engine (found @ https://github.com/angular/universal/tree/main/modules/express-engine)
   server.engine('html', ngExpressEngine({
@@ -39,15 +40,15 @@ export const run: AzureFunction = async function (context: Context, req: HttpReq
   server.set('view engine', 'html');
   server.set('views', distFolder);
 
+  //const body = `debug ${process.cwd()} | ${fs.readdirSync(process.cwd())} |`;
   const body = await (new Promise<string>(resolve => {
-    //resolve(`debug ${process.cwd()} | ${fs.readdirSync(process.cwd())} |`);
     context.log('rendering index');
     try {
       const path = getPath(req);
       if(!path) {
         resolve('404');
       }
-      server.render(indexHtml, { req, url: `http://localhost:4280${path}`, providers: [{ provide: 'SSR_PATH', useValue: path }] }, (err, doc) => {
+      server.render(indexHtml, { req, url: `${new URL(req.url).origin}${path}`, providers: [{ provide: 'SSR_PATH', useValue: path }] }, (err, doc) => {
         context.log('index rendered');
         if(err) {
           resolve(`fail ${err}`);

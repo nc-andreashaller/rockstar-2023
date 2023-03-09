@@ -1,0 +1,18 @@
+{
+  "$schema": "https://aka.ms/azure/static-web-apps-cli/schema",
+  "configurations": {
+    "rockstar-swa": {
+      "appLocation": ".",
+      "apiLocation": "api",
+      "outputLocation": "dist/rendering/browser",
+      "appBuildCommand": "npm run build",
+      "apiBuildCommand": "npm run build --if-present",
+      "run": "npm start",
+      "appDevserverUrl": "http://localhost:4200",
+      "appName": "rockstar-swa",
+      "resourceGroup": "rockstar-rg",
+      "platform.apiRuntime": "node:16",
+      "env": "production"
+    }
+  }
+}
