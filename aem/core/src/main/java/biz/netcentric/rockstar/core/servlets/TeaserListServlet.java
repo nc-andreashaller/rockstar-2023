@@ -15,23 +15,15 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
-import org.apache.jackrabbit.commons.json.JsonHandler;
-import org.apache.jackrabbit.commons.json.JsonParser;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
-import org.apache.sling.api.request.RequestPathInfo;
 import org.apache.sling.api.servlets.SlingSafeMethodsServlet;
-import org.apache.sling.api.wrappers.SlingHttpServletRequestWrapper;
 import org.apache.sling.servlets.annotations.SlingServletResourceTypes;
 import org.osgi.service.component.annotations.Component;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.day.cq.commons.PathInfo;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ArrayNode;
-import com.google.gson.GsonBuilder;
 
 import biz.netcentric.rockstar.core.utils.UrlUtils;
 
@@ -39,6 +31,7 @@ import biz.netcentric.rockstar.core.utils.UrlUtils;
 @SlingServletResourceTypes(
     resourceTypes="/apps/rockstar-2023/teaser-list", 
     methods= "GET",
+    selectors = "public",
     extensions="json")
 public class TeaserListServlet extends SlingSafeMethodsServlet {
  
@@ -54,7 +47,8 @@ public class TeaserListServlet extends SlingSafeMethodsServlet {
             List<Map<String, String>> teaserList = new ArrayList<>();
             Map<String, ?> parsedJson = (Map<String, ?>) mapper.readValue(json, Map.class);
             for(Map<String, String> page : (List<Map<String, String>>) parsedJson.get("data")) {
-                if(page.get("path").startsWith(request.getRequestPathInfo().getSuffix())) {
+                String suffix = request.getRequestPathInfo().getSuffix();
+                if(page.get("path").startsWith(suffix == null ? "/" : suffix)) {
                     Map<String, String> teaser = new HashMap<>();
                     teaser.put("url", page.get("path"));
                     teaser.put("title", page.get("title"));

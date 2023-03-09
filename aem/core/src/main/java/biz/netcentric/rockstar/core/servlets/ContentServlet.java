@@ -24,6 +24,7 @@ import biz.netcentric.rockstar.core.utils.UrlUtils;
 @SlingServletResourceTypes(
     resourceTypes="/apps/rockstar-2023/content", 
     methods= "GET",
+    selectors = "public",
     extensions="html")
 public class ContentServlet extends SlingSafeMethodsServlet {
  

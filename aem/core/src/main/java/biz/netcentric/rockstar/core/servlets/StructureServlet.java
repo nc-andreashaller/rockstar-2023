@@ -19,6 +19,7 @@ import com.day.cq.commons.PathInfo;
 @SlingServletResourceTypes(
     resourceTypes="/apps/rockstar-2023/structure", 
     methods= "GET",
+    selectors = "public",
     extensions="json")
 public class StructureServlet extends SlingSafeMethodsServlet {
  

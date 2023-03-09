@@ -1,0 +1,9 @@
+#
+# This file contains the filter ACL, and can be customized.
+#
+# By default, it includes the default filter ACL.
+#
+
+$include "./default_filters.any"
+
+/006 { /type "allow" /method "GET" /url "/apps/rockstar-2023/services/*" /extension "json" /selectors "public" }
