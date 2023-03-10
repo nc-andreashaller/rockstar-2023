@@ -4,7 +4,9 @@
     ""
   ],
   "supportedmethods":[
-    "GET"
+    "GET",
+    "HEAD",
+    "OPTIONS"
   ],
   "alloworigin":[
     ""

@@ -6,4 +6,4 @@
 
 $include "./default_filters.any"
 
-/006 { /type "allow" /method "GET" /url "/apps/rockstar-2023/services/*" /extension '(json|html)' /selectors "public" }
+/006 { /type "allow" /method '(GET|OPTIONS)' /url "/apps/rockstar-2023/services/*" /extension '(json|html)' /selectors "public" }
