@@ -5,3 +5,9 @@
 #
 
 $include "./default_rules.any"
+
+# Don't rockstar services
+/0002 {
+    /glob "/apps/rockstar-2023/services/*"
+    /type "deny"
+}
