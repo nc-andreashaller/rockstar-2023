@@ -9,8 +9,7 @@
     "test": "ng test",
     "dev:ssr": "ng run rendering:serve-ssr",
     "start:ssr": "npm run build && swa start dist/rendering/browser --api-location api",
-    "build:ssr": "ng build && ng run rendering:server && cp -r dist api/",
-    "prerender": "ng run rendering:prerender",
+    "build:ssr": "ng build --configuration production && ng run rendering:server:production && cp -r dist api/",
     "deploy": "swa"
   },
   "private": true,

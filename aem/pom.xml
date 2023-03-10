@@ -40,7 +40,6 @@
         <module>rockstar-2023.apps.structure</module>
         <module>rockstar-2023.config</module>
         <module>rockstar-2023.content</module>
-        <module>dispatcher</module>
     </modules>
 
     <properties>

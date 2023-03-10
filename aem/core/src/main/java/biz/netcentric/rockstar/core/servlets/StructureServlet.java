@@ -39,7 +39,7 @@ public class StructureServlet extends SlingSafeMethodsServlet {
 
         private ModelRequest(SlingHttpServletRequest wrappedRequest) {
             super(wrappedRequest);
-            pathInfo = wrappedRequest.getRequestPathInfo().getSuffix() + "/_jcr_content/root/container.model.json";
+            pathInfo = "/content/rockstar-2023" + wrappedRequest.getRequestPathInfo().getSuffix() + "/_jcr_content/root/container.model.json";
         }
 
         @Override
