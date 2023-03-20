@@ -1,8 +1,12 @@
 <app-header></app-header>
 
-<app-component-container *ngIf="structure" [ssr]="ssr" [structure]="structure"></app-component-container>
+<div class="rockstar-content-wrapper">
 
-<mat-grid-list *ngIf="reference" [cols]="12" class="direct-content">
-    <app-html-snippet [reference]="reference" [columnSpan]="12"></app-html-snippet>
-</mat-grid-list>
+    <app-component-container *ngIf="structure" [ssr]="ssr" [structure]="structure"></app-component-container>
 
+    <mat-grid-list *ngIf="reference" [cols]="12" class="direct-content">
+        <app-html-snippet [reference]="reference" [columnSpan]="12"></app-html-snippet>
+    </mat-grid-list>
+
+    <div class="clearer"></div>
+</div>

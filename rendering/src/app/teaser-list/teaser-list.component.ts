@@ -1,6 +1,7 @@
 import { Component, Input, SimpleChanges, ElementRef, OnInit, OnChanges } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { TeaserListService } from '../teaser-list.service';
+import { LoadingService } from '../loading.service';
 
 @Component({
   selector: 'app-teaser-list',
@@ -15,7 +16,9 @@ export class TeaserListComponent implements OnInit, OnChanges {
   @Input() columnSpan: number = 0;
   list: Array<any> = [];
 
-  constructor(private host:ElementRef, private teaserListService: TeaserListService) { }
+  constructor(private host:ElementRef, 
+    private teaserListService: TeaserListService,
+    private loadingService: LoadingService) { }
 
   ngOnInit(): void {
     this.load();
@@ -32,10 +35,11 @@ export class TeaserListComponent implements OnInit, OnChanges {
   }
 
   private async load() : Promise<void> {
+    this.loadingService.start();
     if(this.reference) {
-      await this.teaserListService.get(this.reference);
       this.list = await this.teaserListService.get(this.reference);
     }
+    this.loadingService.finish();
   }
 
   private setColumnSpan(): void {

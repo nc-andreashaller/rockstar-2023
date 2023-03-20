@@ -2,6 +2,7 @@ import { Directionality } from '@angular/cdk/bidi';
 import { Component, Input, OnChanges, SimpleChanges, OnInit, ElementRef } from '@angular/core';
 import { MatGridList, MatGridTile } from '@angular/material/grid-list';
 import { ContentService } from '../content.service';
+import { LoadingService } from '../loading.service';
 
 @Component({
   selector: 'app-html-snippet',
@@ -16,7 +17,9 @@ export class HtmlSnippetComponent implements OnInit, OnChanges {
   @Input() columnSpan: number = 0;
   markup: string = '';
 
-  constructor(private host:ElementRef, private contentService: ContentService) { }
+  constructor(private host:ElementRef, 
+    private contentService: ContentService,
+    private loadingService: LoadingService) { }
 
   ngOnInit(): void {
     this.load();
@@ -33,9 +36,11 @@ export class HtmlSnippetComponent implements OnInit, OnChanges {
   }
 
   private async load() : Promise<void> {
+    this.loadingService.start();
     if(this.reference) {
       this.markup = await this.contentService.get(this.reference);
     }
+    this.loadingService.finish();
   }
 
   private setColumnSpan(): void {

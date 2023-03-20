@@ -3,6 +3,7 @@ import { Component, Inject, OnInit, Optional, PLATFORM_ID } from '@angular/core'
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 import { StructureService } from './structure.service';
+import { LoadingService } from './loading.service';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,8 @@ export class AppComponent implements OnInit {
     @Inject(PLATFORM_ID) private platformId: Object,
     @Optional() @Inject('SSR_PATH') private ssrUrl: string,
     private router: Router,
-    private structureService:  StructureService) {
+    private structureService:  StructureService,
+    private loadingService: LoadingService) {
       this.ssr = isPlatformServer(this.platformId);
     }
 
@@ -27,9 +29,8 @@ export class AppComponent implements OnInit {
     this.router.events.pipe(filter(e => e instanceof NavigationEnd)).subscribe(() => this.loadStructure());
   }
   
-
-
   private async loadStructure() {
+    this.loadingService.start();
     const path = this.ssr 
       ? this.ssrUrl // execution in azure function
       : location.pathname.startsWith('/api/ssr') && new URLSearchParams(location.search).has('path')
@@ -45,5 +46,6 @@ export class AppComponent implements OnInit {
       this.structure = await this.structureService.get(path);
       console.log('loaded structure', this.structure);
     }
+    this.loadingService.finish();
   }
 }

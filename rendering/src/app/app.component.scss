@@ -13,3 +13,22 @@
         margin-left: unset;
     }
 }
+
+:host {
+    .clearer {
+        clear: both;
+    }
+
+    .rockstar-content-wrapper {
+        transition: opacity .5s ease-in;
+    }    
+}
+
+.rockstar-loading {
+    :host {
+        .rockstar-content-wrapper {
+            transition: opacity 0ms;
+            opacity: 0;
+        }
+    }
+}
