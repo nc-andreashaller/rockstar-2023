@@ -15,6 +15,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { TeaserListComponent } from './teaser-list/teaser-list.component';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { TeaserListComponent } from './teaser-list/teaser-list.component';
     MatIconModule,
     MatMenuModule,
     MatGridListModule,
+    NgxSkeletonLoaderModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -12,9 +12,45 @@
     .columns > div > div:first-of-type {
         margin-left: unset;
     }
+
+    ngx-skeleton-loader {
+        margin: 20px;
+        display: none;
+
+        .skeleton-loader {
+            margin: 0;
+        }
+    }
+
+    
+
+    .rockstar-loading {
+        ngx-skeleton-loader {
+            display: block;
+        }
+    }
 }
 
 :host {
+    ::ng-deep {
+        ngx-skeleton-loader {
+            .skeleton-loader.circle {
+                width: 60px;
+                height: 60px;
+                float: left;
+            }
+        }
+        ngx-skeleton-loader.circle {
+            float: left;
+        }
+        ngx-skeleton-loader.circle-line {
+            float: left;
+            width: calc(100% - 150px);
+            margin-top: 30px;
+        }
+    }
+
+
     .clearer {
         clear: both;
     }

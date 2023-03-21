@@ -1,5 +1,9 @@
 <app-header></app-header>
 
+<ngx-skeleton-loader count="1" class="circle" appearance="circle"></ngx-skeleton-loader>
+<ngx-skeleton-loader count="2" class="circle-line" appearance="line"></ngx-skeleton-loader>
+<ngx-skeleton-loader count="3" class="clearer" appearance="line"></ngx-skeleton-loader>
+
 <div class="rockstar-content-wrapper">
 
     <app-component-container *ngIf="structure" [ssr]="ssr" [structure]="structure"></app-component-container>
@@ -9,4 +13,6 @@
     </mat-grid-list>
 
     <div class="clearer"></div>
+
+
 </div>
