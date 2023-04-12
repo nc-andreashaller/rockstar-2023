@@ -9,8 +9,8 @@ This repository contains the AEM Franklin, AEM Sites and Angular modules. The st
 
 ### Angular
 
-- (**deaktivated**) SSR: https://kind-moss-0648f6d1e.2.azurestaticapps.net/api/ssr?path=%2F
-- (**deaktivated**) CSR: https://kind-moss-0648f6d1e.2.azurestaticapps.net/
+- (**deactivated**) SSR: https://kind-moss-0648f6d1e.2.azurestaticapps.net/api/ssr?path=%2F
+- (**deactivated**) CSR: https://kind-moss-0648f6d1e.2.azurestaticapps.net/
 
 ### Franklin
 
